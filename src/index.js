@@ -1,6 +1,13 @@
 const app = document.getElementById('app');
 const form = document.getElementById('form');
 
+const validateUrl = url => {
+  const text = url.toLowerCase().replaceAll(' ', '-');
+  const str = text.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+
+  return `/${str}`
+}
+
 const validateDate = () => {
   const date = new Date();
   const year = date.getFullYear();
@@ -13,21 +20,17 @@ const validateDate = () => {
 const validateAuthor = author => {
   switch (author) {
     case 'hernanroldan':
-      return `
-      author: Hernán Roldán
+      return `author: Hernán Roldán
       author_img: /images/author-hernanroldan.png
       author_description: 
       author_linkedin: 'hroldán'
-      author_email: 'hernan@peiscof.com'
-      `;
+      author_email: 'hernan@peiscof.com'`;
     case 'martinroldan':
-      return `
-      author: Martín Roldán
+      return `author: Martín Roldán
       author_img: /images/author-martinroldan.png
       author_description: 
       author_linkedin: 'martindavidroldan'
-      author_email: 'martin@peiscof.com'
-      `;
+      author_email: 'martin@peiscof.com'`;
     default:
       return '';
   }
@@ -58,7 +61,6 @@ const generatorTemplate = e => {
   const title = data.title.value;
   const subtitle = data.subtitle.value;
   const description = data.description.value;
-  const url = data.url.value;
   const tag = data.tag.value;
   const imageUrl = data.imageUrl.value;
   const thumbUrl = data.thumbUrl.value;
@@ -67,7 +69,7 @@ const generatorTemplate = e => {
   const template = `
   ---
   title: ${title}
-  url: /${url}
+  url: ${validateUrl(title)}
   subtitle: ${subtitle}
   excerpt: >-
     ${description}
