@@ -81,9 +81,14 @@ body {
 
 .template__form input,
 .template__form select {
+  height: 40px;
+}
+
+.template__form input,
+.template__form select,
+.template__form textarea {
   width: 100%;
   max-width: 680px;
-  height: 40px;
   margin-bottom: 2rem;
   padding-left: .5rem;
   color: var(--gray);
@@ -93,12 +98,19 @@ body {
   outline: none;
 }
 
+.template__form textarea {
+  min-height: 120px;
+  max-height: 240px;
+  resize: vertical;
+}
+
 .template__form input:focus-within,
-.template__form select:focus-within {
+.template__form select:focus-within,
+.template__form textarea:focus-within {
   outline: 2px solid var(--border-color);
 }
 
-.template__form input::placeholder {
+::placeholder {
   font-size: 1.5rem;
   color: var(--gray-light);
 }
