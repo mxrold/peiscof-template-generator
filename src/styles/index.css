@@ -27,7 +27,7 @@ body {
 .app {
   width: 100%;
   max-width: 1440px;
-  padding: 4rem;
+  padding: 1rem;
 }
 
 .header {
@@ -44,7 +44,7 @@ body {
 .template,
 .result-template {
   width: 100%;
-  padding: 4rem;
+  padding: 2rem;
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
 }
@@ -75,7 +75,6 @@ body {
 }
 
 .template__form label {
-  width: max-content;
   font-size: 2rem;
   margin-bottom: 0.5rem;
 }
@@ -86,7 +85,7 @@ body {
   max-width: 680px;
   height: 40px;
   margin-bottom: 2rem;
-  padding-left: 1.5rem;
+  padding-left: .5rem;
   color: var(--gray);
   border: none;
   border-bottom: 2px solid var(--border-color);
@@ -122,8 +121,22 @@ button {
 }
 
 @media screen and (min-width: 1020px) {
+  .app {
+    padding: 4rem;
+  }
+  
+  .template,
+  .result-template {
+    padding: 4rem;
+  }
+
   .template__form--data {
     width: 80%;
+  }
+
+  .template__form input,
+  .template__form select {
+    padding-left: 1.5rem;
   }
 
   button {

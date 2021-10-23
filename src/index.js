@@ -67,7 +67,7 @@ const generatorTemplate = e => {
   const template = `
   ---
   title: ${title}
-  url: ${url}
+  url: /${url}
   subtitle: ${subtitle}
   excerpt: >-
     ${description}
