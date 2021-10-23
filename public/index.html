@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./favicon.png" />
+  <title>Peiscof Template Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../src/styles/index.css">
+</head>
+<body>
+  <div class="app" id="app">
+    <header class="header">
+      <h1>Peiscof Template Generator</h1>
+    </header>
+    <section class="template">
+      <h2>Genera la plantilla completando el formulario 🎉</h2>
+      <form class="template__form" id="form">
+        <div class="template__form--data">
+          <label id="title">🚀 Título</label>
+          <input type="text" id="title" placeholder="Título" autocomplete="off" required />
+    
+          <label id="subtitle">🙉 Subtítulo (No obligatorio)</label>
+          <input type="text" id="subtitle" placeholder="Subtítulo" autocomplete="off" />
+    
+          <label id="description">📖 Descripción</label>
+          <input type="text" id="description" placeholder="Descripción" autocomplete="off"required />
+
+          <label id="url">🌎 Url del post</label>
+          <input type="text" id="url" placeholder="Url del post" autocomplete="off" required />
+    
+          <label id="tag">🧠 Categoria del post</label>
+          <select id="tag" required>
+            <option value="¿Cuál es la categoria del post?" selected disabled>¿Cuál es la categoria del post?</option>
+            <option value="noticias">Noticias</option>
+            <option value="tutoriales">Tutoriales</option>
+            <option value="programación">Programación</option>
+            <option value="juegos">Juegos</option>
+            <option value="android">Android</option>
+            <option value="apple">Apple</option>
+            <option value="windows">Windows</option>
+            <option value="linux">Linux</option>
+          </select>
+    
+          <label id="imageUrl">🎨 Url de la imagen</label>
+          <input type="text" id="imageUrl" placeholder="Url de la imagen" autocomplete="off" required />
+          
+          <label id="thumbUrl">🌻 Url de la imagen de portada</label>
+          <input type="text" id="thumbUrl" placeholder="Url de la imagen de portada" autocomplete="off" required />
+    
+          <label id="author">🍻 Autor del post</label>
+          <select id="author" required>
+            <option value="¿Quién es el autor del post?" selected disabled>¿Quién es el autor del post?</option>
+            <option value="hernanroldan">Hernán Roldán</option>
+            <option value="martinroldan">Martín Roldán</option>
+          </select>
+        </div>
+
+        <button type="submit">Crear plantilla</button>
+      </form>
+    </section>
+  </div>
+
+  <script src="../src/index.js" type="module"></script>
+</body>
+</html>

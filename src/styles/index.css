@@ -1,0 +1,133 @@
+:root {
+  --background-app: #f3f4f6;
+  --gray: #374151;
+  --gray-light: #6b7280;
+  --border-color: #d1d5db;
+  --green: #57cc99;
+  --blue: #345ef7;
+  --border-radius: 3px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--gray);
+}
+
+.app {
+  width: 100%;
+  max-width: 1440px;
+  padding: 4rem;
+}
+
+.header {
+  width: 100%;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.template,
+.result-template {
+  width: 100%;
+  padding: 4rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.result-template {
+  overflow-x: auto;
+  margin-top: 3rem;
+  background-color: #272c30;
+  color: white;
+}
+
+.template h2 {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.template__form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.template__form--data {
+  display: inherit;
+  flex-direction: column;
+  width: 100%;
+}
+
+.template__form label {
+  width: max-content;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.template__form input,
+.template__form select {
+  width: 100%;
+  max-width: 680px;
+  height: 40px;
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+  color: var(--gray);
+  border: none;
+  border-bottom: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  outline: none;
+}
+
+.template__form input:focus-within,
+.template__form select:focus-within {
+  outline: 2px solid var(--border-color);
+}
+
+.template__form input::placeholder {
+  font-size: 1.5rem;
+  color: var(--gray-light);
+}
+
+button {
+  align-self: flex-end;
+  width: 100%;
+  max-width: 320px;
+  height: max-content;
+  margin: 2rem auto 0 auto;
+  padding: 1rem 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: var(--blue);
+  color: white;
+  border: none;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1020px) {
+  .template__form--data {
+    width: 80%;
+  }
+
+  button {
+    width: 20%;
+    margin: 0 auto 2rem auto;
+  }
+}
