@@ -71,6 +71,8 @@ seo:
       - name: 'og:type'
         value: article
         keyName: property
+      - name: 'og:url'
+        value: https://peiscof.com/blog/${validateUrl(title)}
       - name: 'og:title'
         value: ${title}
         keyName: property
@@ -84,6 +86,10 @@ seo:
         relativeUrl: true
       - name: 'twitter:card'
         value: summary_large_image
+      - name: 'twitter:site'
+        value: '@peiscof
+      - name: 'twitter:creator'
+        value: '@peiscof'
       - name: 'twitter:title'
         value: ${title}
       - name: 'twitter:description'
