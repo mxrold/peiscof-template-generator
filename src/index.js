@@ -87,7 +87,7 @@ seo:
       - name: 'twitter:card'
         value: summary_large_image
       - name: 'twitter:site'
-        value: '@peiscof
+        value: '@peiscof'
       - name: 'twitter:creator'
         value: '@peiscof'
       - name: 'twitter:title'
