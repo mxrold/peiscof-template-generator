@@ -83,7 +83,7 @@ seo:
       - name: 'og:image'
         value: ${imageUrl}
         keyName: property
-        relativeUrl: true
+        relativeUrl: false
       - name: 'twitter:card'
         value: summary_large_image
       - name: 'twitter:site'
@@ -97,7 +97,7 @@ seo:
           ${description}
       - name: 'twitter:image'
         value: ${imageUrl}
-        relativeUrl: true
+        relativeUrl: false
 layout: post
 ---`;
 
